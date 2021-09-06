@@ -1,0 +1,44 @@
+mixin header(data)
+	if data.header1
+		+row({
+			col: 1,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_top: mr_darkblue,
+			margin_bottom: mr_darkblue,
+			margin_bottom_class: 'divider-bottom',
+			content: {
+				name: 'img',
+				arg: {
+					link: '#',
+					img_link: 'fashion-logo-187-53-01.jpg',
+					alt: 'Logo',
+					width: '187',
+					height: '53'
+				}
+			}
+		})
+	if data.header2
+		+row({
+			col: 1,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: body_width,
+			rtl: false,
+			margin_top: mr_turquoise,
+			margin_bottom: mr_darkblue,
+			content: {
+				name: 'img',
+				arg: {
+					link: '#',
+					img_link: 'fashion-logo-187-53-01.jpg',
+					alt: 'Logo',
+					width: '187',
+					height: '53'
+				}
+			}
+		})

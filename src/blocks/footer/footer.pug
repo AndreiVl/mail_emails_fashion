@@ -1,0 +1,54 @@
+mixin footer(data)
+	+row({
+		col: 1,
+		bg_body: bg_body_2,
+		body_pading_l: body_pading_l,
+		body_pading_r: body_pading_r,
+		body_width: body_width,
+		rtl: false,
+		margin_top: mr_turquoise,
+		margin_bottom: mr_violet,
+		content: {
+			name: 'text',
+			arg: [
+				{
+					type: 'content',
+					name: 'socials',
+					arg: {
+						social: true
+					}
+				},
+				{
+					type: 'text',
+					class: 'text text--sm text--grey-light',
+					text: '8502 Preston Rd. Inglewood, Los Angeles, MM-75859<br><a href="mailto:emailtest@domain.com" class="link link--grey-light link--no-decor"> emailtest@domain.com</a>',
+					alignment: 'center'
+				},
+				{
+					type: 'margin',
+					margin: mr_violet
+				},
+				{
+					type: 'text',
+					class: 'text text--grey-light',
+					text: '<a href="tel:+0102352546" class="link link--grey-light">+010 235 2546</a>',
+					alignment: 'center'
+				},
+				{
+					type: 'margin',
+					margin: mr_violet
+				},
+				{
+					type: 'dividerWidth',
+					margin: mr_violet,
+					width: 250
+				},
+				{
+					type: 'text',
+					class: 'text text--sm text--grey-light',
+					text: '© All Rights Reserved | <a href="mailto:emailtest@domain.com" class="link link--grey-light">Unsubscribe</a>',
+					alignment: 'center'
+				}
+			]
+		}
+	})

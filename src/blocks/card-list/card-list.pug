@@ -1,0 +1,77 @@
+mixin card-list(data)
+	if data.cardList1
+		+row({
+			col: 3,
+			bg_body: bg_body,
+			body_pading_l: body_pading_l,
+			body_pading_r: body_pading_r,
+			body_width: col_body_width_3,
+			rtl: false,
+			margin_top_class: false,
+			margin_bottom: mr_turquoise,
+			content: {
+				colWidth: td_3_col_width,
+				colPadding: '10px 10px',
+				items: [
+					{	valign: 'top',
+						name: 'card-item',
+						arg: {
+							cardItemImg: 'fashion-product-154-230-01.jpg',
+							cardItemImgAlt: 'slim tapper 211',
+							cardItemImgWidth: 154,
+							cardItemImgHeight: 230,
+							cardItemMargin: mr_violet,
+							cardItemUrl: '#',
+							cardItemLink: 'Slim Tapper 211',
+							text: 'grey'
+						}
+					},
+					{	valign: 'top',
+						name: 'card-item',
+						arg: {
+							cardItemImg: 'fashion-product-154-230-02.jpg',
+							cardItemImgAlt: 'slim tapper 216',
+							cardItemImgWidth: 154,
+							cardItemImgHeight: 230,
+							cardItemMargin: mr_violet,
+							cardItemUrl: '#',
+							cardItemLink: 'Slim Tapper 216',
+							text: 'black'
+						}
+					},
+					{	valign: 'top',
+						name: 'card-item',
+						arg: {
+							cardItemImg: 'fashion-product-154-230-03.jpg',
+							cardItemImgAlt: 'slim tapper 212',
+							cardItemImgWidth: 154,
+							cardItemImgHeight: 230,
+							cardItemMargin: mr_violet,
+							cardItemUrl: '#',
+							cardItemLink: 'Slim Tapper 212',
+							text: 'brown'
+						}
+					}
+				]
+			}
+		})
+
+mixin card-item(data)
+	table.table-after-div(align="center" bgcolor=data.block_bg border="0" cellpadding="0" cellspacing="0" width="100%")
+		tr
+			td(align='center' style="line-height: 0px;" width=data.cardItemImgWidth)
+				+img({
+					img_big: data.cardItemImg, 
+					alt: data.cardItemImgAlt,
+					width: data.cardItemImgWidth,
+					height: data.cardItemImgHeight
+				})
+		tr
+			+td-margin({height: data.cardItemMargin})
+		tr
+			<!-- ID:TXT LINK  -->
+			td.text.text--btn.text--black.text--bold(align='center')
+				a.link.link--black.link--no-decor(href=data.cardItemUrl)!=data.cardItemLink
+		tr
+			<!-- ID:TXT TEXT  -->
+			td.text(align='center')!=data.text

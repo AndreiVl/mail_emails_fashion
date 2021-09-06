@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+html(lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="min-height: 100vh;")
+	include include/head.pug
+	+head('email-6')
+
+	body(style="width: 100%; padding: 0; Margin: 0; min-height: 100vh")
+		include ../blocks-ui-components/ui-components-mixins.pug			
+		include ../blocks/mixins.pug						
+		<!-- BODY -->
+		table(align="center" bgcolor=bg_table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-height: 100vh;")
+			tr 
+				td(align="center" valign="top" style="vertical-align: top;")
+					table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+						tr
+							+td-margin({height: mr_body })
+						tr
+							td(align="center")
+								<!-- PREHEADERS STARTS -->
+								+preheaders({preheaders1: true})
+								<!-- PREHEADERS ENDS -->
+						tr
+							td(align="center")
+								<!-- HEADER STARTS -->
+								+header({header2: true})
+								<!-- HEADER ENDS -->
+						tr
+							td(align="center")
+								<!-- BANNER STARTS -->
+								+banner({
+									name: 'img-wraper',
+									bg_body: bg_body_3,
+									arg: {
+										img: 'fashion-bunner-560-372-02.jpg',
+										alt: 'bunner',
+										width: 560 ,
+										height: 372
+									}
+								})
+								<!-- BANNER ENDS -->
+						tr
+							td(align="center")
+								<!-- TITLE CONTENT STARTS -->
+									+row({
+										col: 1,
+										bg_body: bg_body,
+										body_pading_l: body_pading_l,
+										body_pading_r: body_pading_r,
+										body_width: body_width,
+										rtl: false,
+										margin_top: mr_turquoise,
+										margin_bottom: mr_mediumblue,
+										content: {
+											name: 'text',
+											arg: [
+												{
+													type: 'content',
+													name: 'title',
+													arg: {
+														title: 'Hey, welcome!'
+													}
+												},
+												{
+													type: 'margin',
+													margin: mr_purpur
+												},
+												{
+													type: 'text',
+													class: 'text',
+													text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+													alignment: 'center'
+												}
+											]
+										}
+									})
+								<!-- TITLE CONTENT ENDS -->
+						tr
+							td(align="center")
+								<!-- BREND-LIST STARTS -->
+								+brend-list({brendList1: true})
+								<!-- BREND-LIST ENDS -->
+						tr
+							td(align="center")
+								<!-- CTA-TWO STARTS -->
+								+cta-two({})
+								<!-- CTA-TWO  ENDS -->
+						tr
+							td(align="center")
+								<!-- STORES CONTENT STARTS -->
+								+stores({
+									margin_top: mr_turquoise,
+									margin_bottom: mr_blue
+								})
+								<!-- STORES CONTENT ENDS -->
+						tr
+							td(align="center")
+								<!-- STORES STARTS -->
+								+footer({})
+								<!-- STORES ENDS -->
+						tr
+							+td-margin({height: mr_body })
+		<!-- /BODY -->

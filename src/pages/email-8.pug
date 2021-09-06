@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+html(lang="ru" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="min-height: 100vh;")
+	include include/head.pug
+	+head('email-8')
+
+	body(style="width: 100%; padding: 0; Margin: 0; min-height: 100vh;")
+		include ../blocks-ui-components/ui-components-mixins.pug			
+		include ../blocks/mixins.pug						
+		<!-- BODY -->
+		table(align="center" bgcolor=bg_table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-height: 100vh;")
+			tr 
+				td(align="center" valign="top" style="vertical-align: top;")
+					table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+						tr
+							+td-margin({height: mr_body })
+						tr
+							td(align="center")
+								<!-- PREHEADERS STARTS -->
+								+preheaders({preheaders1: true})
+								<!-- PREHEADERS ENDS -->
+						tr
+							td(align="center")
+								<!-- HEADER STARTS -->
+								+header({header1: true})
+								<!-- HEADER ENDS -->
+						tr
+							td(align="center")
+								<!-- TITLE CONTENT STARTS -->
+									+row({
+										col: 1,
+										bg_body: bg_body,
+										body_pading_l: body_pading_l,
+										body_pading_r: body_pading_r,
+										body_width: body_width,
+										rtl: false,
+										margin_top: mr_mediumblue,
+										margin_bottom: mr_purpur,
+										content: {
+											name: 'text',
+											arg: [
+												{
+													type: 'content',
+													name: 'title',
+													arg: {
+														title: 'new summer collection'
+													}
+												},
+												{
+													type: 'margin',
+													margin: mr_purpur
+												},
+												{
+													type: 'text',
+													class: 'text text--xl',
+													text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.',
+													alignment: 'center'
+												}
+											]
+										}
+									})
+								<!-- TITLE CONTENT ENDS -->
+						tr
+							td(align="center")
+								<!-- CARD-GORIZONTAL STARTS -->
+								+card-gorizontal({
+									cardGorizontalOne: true
+								})
+								<!-- CARD-GORIZONTAL ENDS -->
+						tr
+							td(align="center")
+								<!-- CARD-LIST STARTS -->
+								+card-list({
+									cardList1: true
+								})
+								<!-- CARD-LIST ENDS -->
+						tr
+							td(align="center")
+								<!-- TITLE STARTS -->
+								+row({
+									col: 1,
+									bg_body: bg_body,
+									body_pading_l: body_pading_l,
+									body_pading_r: body_pading_r,
+									body_width: body_width,
+									rtl: false,
+									margin_top: false,
+									margin_bottom: mr_violet,
+									content: {
+										name: 'title',
+										arg: {
+											title: 'see also'
+										}
+									}
+								})
+								<!-- TITLE ENDS -->
+						tr
+							td(align="center")
+								<!-- 2 BTNS STARTS -->
+								+row({
+									col: 2,
+									bg_body: bg_body,
+									body_pading_l: body_pading_l,
+									body_pading_r: body_pading_r,
+									body_width: col_body_width,
+									rtl: false,
+									margin_top: false,
+									margin_top_class: false,
+									margin_bottom: mr_violet,
+									content: {
+										colWidth: td_2_col_width,
+										colPadding: '10px 10px',
+										valing_right: 'top',
+										valing_left: 'top',
+										col2_left: {
+											name: 'btn',
+											arg: {
+												link: '#',
+												img: 'fashion-btn-241-46-01.jpg',
+												width: 241,
+												height: 46
+											}
+										},
+										col2_right: {
+											name: 'btn',
+											arg: {
+												link: '#',
+												img: 'fashion-btn-241-46-02.jpg',
+												width: 241,
+												height: 46
+											}
+										}
+									}
+								})
+								<!-- 2 BTNS ENDS -->
+						tr
+							td(align="center")
+								<!-- BTN STARTS -->
+								+row({
+									col: 1,
+									bg_body: bg_body,
+									body_pading_l: body_pading_l,
+									body_pading_r: body_pading_r,
+									body_width: body_width,
+									rtl: false,
+									margin_top: false,
+									margin_bottom: mr_mediumblue,
+									content: {
+										name: 'btn',
+										arg: {
+											link: '#',
+											img: 'fashion-btn-241-46-03.jpg',
+											width: 241,
+											height: 46
+										}
+									}
+								})
+								<!-- BTN ENDS -->
+						tr
+							td(align="center")
+								<!-- TEXT CONTENT STARTS -->
+									+row({
+										col: 1,
+										bg_body: bg_body,
+										body_pading_l: body_pading_l,
+										body_pading_r: body_pading_r,
+										body_width: body_width,
+										rtl: false,
+										margin_top: false,
+										margin_bottom: mr_blue,
+										content: {
+											name: 'text',
+											arg: [
+												{
+													type: 'text',
+													class: 'text',
+													text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, et non quis morbi duis velit ac, tincidunt nibh. Pellentesque mi dictumst ut nibh curabitur dui sit viverra. Ut urna nec, eget felis eget lorem purus mattis.',
+													alignment: 'center'
+												}
+											]
+										}
+									})
+								<!-- TEXT CONTENT ENDS -->
+						tr
+							td(align="center")
+								<!-- STORES STARTS -->
+								+footer({})
+								<!-- STORES ENDS -->
+						tr
+							+td-margin({height: mr_body })
+		<!-- /BODY -->
